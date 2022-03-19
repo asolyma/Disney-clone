@@ -69,7 +69,9 @@ const Info: React.FC<{ session: Session; movie?: Movie; tv?: Tv }> = ({
                     controls={true}
                     width={"100%"}
                     height={"100%"}
-                    url={`https://www.youtube.com/watch?v=${tv.videos?.results?.[tvShowTrailerIndex]?.key}`}
+                    url={`https://www.youtube.com/watch?v=${
+                      tv.videos?.results?.[tvShowTrailerIndex || 0]?.key
+                    }`}
                     playing={showPlayer}
                   />
                 </div>
@@ -125,7 +127,10 @@ const Info: React.FC<{ session: Session; movie?: Movie; tv?: Tv }> = ({
                     controls={true}
                     width={"100%"}
                     height={"100%"}
-                    url={`https://www.youtube.com/watch?v=${movie.videos?.results?.[MovieTrailerindex]?.key}`}
+                    url={`https://www.youtube.com/watch?v=${
+                      movie.videos?.results?.[MovieTrailerindex || 0].key
+                    }`}
+                    playing
                   />
                 </div>
               </div>

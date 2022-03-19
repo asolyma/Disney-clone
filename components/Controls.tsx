@@ -73,8 +73,9 @@ const Controls: React.FC<{
           </div>
         </div>
         <p className="text-sm p-2 md:text-[18px] text-gray-200 font-bold">
-          {movie?.release_date} . {Math.floor(movie.runtime / 60)}h{" "}
-          {movie.runtime % 60}m .{" "}
+          {movie?.release_date} .{" "}
+          {Math.floor((movie.runtime ? movie.runtime : 0) / 60)}h{" "}
+          {(movie.runtime ? movie.runtime : 0) % 60}m .{" "}
           {movie.genres?.map((genre) => genre.name + " ")}
         </p>
         <div className="px-4 text-justify text-sm text-white max-w-[400px] md:max-w-[600px]">
@@ -82,6 +83,6 @@ const Controls: React.FC<{
         </div>
       </div>
     );
-  }
+  } else return <div>To Be Implemented </div>;
 };
 export default Controls;
