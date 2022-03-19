@@ -6,10 +6,14 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        backgroundImage: "url('/images/background.png')",
+      },
+    },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
