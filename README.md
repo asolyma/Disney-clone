@@ -3,7 +3,6 @@ This is a disney clone app made with [Next.js](https://nextjs.org/) | [Prisma](h
 ## Getting Started
 
 - Create a .env and .env.local files in the root.
-- Provide your Envirnoment variables as per .env.example and .env.local.example
 - Run the development server:
 
 ```bash
